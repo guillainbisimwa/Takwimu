@@ -1,0 +1,40 @@
+
+
+/*#tab_printBtn table {
+    margin-left: 20px !important; 
+    margin-right: -40px !important; 
+    border: 1px solid red; 
+    width: 80%
+    margin: 50px auto !important;
+}
+#affiche_relev_stat_table>tbody>tr>td, 
+#affiche_relev_stat_table>tbody>tr>th, 
+#affiche_relev_stat_table>thead>tr>td, 
+#affiche_relev_stat_table>thead>tr>th {
+     padding: 5.9px !important; 
+}*/
+.card-header{
+    display: none !important;
+}
+
+
+#tab_printBtn table {
+    /*margin-left: 50px !important; 
+    margin-right: 50px !important; 
+    border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    /*margin: 50px auto !important;*/
+}
+#affiche_relev_stat_table>tbody>tr>td, 
+#affiche_relev_stat_table>tbody>tr>th, 
+#affiche_relev_stat_table>thead>tr>td, 
+#affiche_relev_stat_table>thead>tr>th {
+     padding: 6.9px !important; 
+}
+.petit_caracter >th {
+    font-size: 10px;
+}
+tr>th{
+    text-align: center !important;
+}
