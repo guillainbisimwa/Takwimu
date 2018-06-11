@@ -1,7 +1,7 @@
 $(document).ready(function(){
 /*
 	$('table td').click(
-		
+
 	function () {
 		console.log("breek")
 	    $('table td:nth-child(' + ($(this).index() + 1) + ')').addClass('hovernaledi');
@@ -28,13 +28,13 @@ function () {
 			success : function(data)
 			{
 				$(".affreslt_aut").html(data);
-				
+
 			}
 		});
-		
+
 	});
 	$(".closebtn").click(function(){
-		
+
 		//$(".msgApology").addClass("bounceOutDown");
 		$(".msgApology").addClass("fadeOutUpBig");
 		$(".msgApology").removeClass("bounceIn");
@@ -77,7 +77,7 @@ function () {
                         data: data,
                         success: function (response) {
                         	$(".affreslt_inst").html(response);
-                        	
+
                             //$('#result > pre').html(response);
                             //$('#result > pre').html(JSON.stringify(response, undefined, 4));
                         }
@@ -88,7 +88,7 @@ function () {
 		var nom_inst = $("#nom_inst").val();
 		var s_a_inst = $("#s_a_inst").val();
 		var details_inst = $("#details_inst").val();
-		
+
 		//var reg = /^[a-zA-Z/ 'éèàç-]{1,20}$/;
 		//if(reg.test(nom_inst) && reg.test(s_a_inst) && reg.test(details_inst) )
 		if($.trim(nom_inst).length > 0 && $.trim(s_a_inst).length > 0 && $.trim(details_inst).length > 0)
@@ -96,9 +96,9 @@ function () {
 			$.ajax({
 				url: 'institution.php',
 				type: 'POST',
-				data : { 
-					nom_inst: nom_inst, 
-					s_a_inst :s_a_inst, 
+				data : {
+					nom_inst: nom_inst,
+					s_a_inst :s_a_inst,
 					details_inst:details_inst
 				},
 				success : function(data)
@@ -106,18 +106,18 @@ function () {
 					$(".affreslt_inst").html(data);
 					//$("#modal_body_inst").css("display","none");
 					$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
 			});
 		}
-		else 
+		else
 		{
 			$.ajax({
 				url: 'institution.php',
 				type: 'POST',
-				data : { 
-					nom_inst: nom_inst, 
-					s_a_inst :s_a_inst, 
+				data : {
+					nom_inst: nom_inst,
+					s_a_inst :s_a_inst,
 					details_inst:details_inst
 				},
 				success : function(data)
@@ -137,7 +137,7 @@ function () {
 			});
 		}
 
-		
+
 	})*/
 	$("#fermer_inst").click(function(){
 		$(".affreslt_inst").html("");
@@ -157,11 +157,11 @@ function () {
 	$("#close_apology").click(function(){
 		$(".fieldset").css("height",0);
 
-	}) 
+	})
 	$(".zmdi-refresh-alt").click(function(){
 		location.reload();
 	})
-	
+
 	$("#fermer_inst").click(function(){
 		console.log("ok")
 		location.reload();
@@ -177,12 +177,12 @@ setTimeout(explode, 2000);*/
  $("#Enregistrer_diocese").click(function(){
 
 		var nom_diocese = $("#nom_diocese").val();
-		
+
 			$.ajax({
 				url: 'diocese.php',
 				type: 'POST',
-				data : { 
-					
+				data : {
+
 					nom_diocese :nom_diocese
 				},
 				success : function(data)
@@ -191,21 +191,21 @@ setTimeout(explode, 2000);*/
 					//$("#modal_body_inst").css("display","none");
 				}
 			});
-			
+
 	})
 
- //enregister coordination sous provincilale 
+ //enregister coordination sous provincilale
   $("#Enregistrer_c_sp").click(function(){
 
 		var nom_diocese = $("#nom_diocese").val();
 		var nom_coord_sp = $("#nom_coord_sp").val();
 		console.log(nom_diocese)
-		
+
 			$.ajax({
 				url: 'coordination_sp.php',
 				type: 'POST',
-				data : { 
-					
+				data : {
+
 					nom_diocese :nom_diocese,
 					nom_coord_sp:nom_coord_sp
 				},
@@ -215,7 +215,7 @@ setTimeout(explode, 2000);*/
 					//$("#modal_body_inst").css("display","none");
 				}
 			});
-			
+
 	})
   //enregistrer paroisse 2
   $("#Enregistrer_p2").click(function(){
@@ -223,12 +223,12 @@ setTimeout(explode, 2000);*/
 		var nom_paroisse = $("#nom_paroisse").val();
 		var nom_coord_sp = $("#nom_coord_sp").val();
 		//console.log(nom_diocese)
-		
+
 			$.ajax({
 				url: 'paroisse.php',
 				type: 'POST',
-				data : { 
-					
+				data : {
+
 					nom_paroisse :nom_paroisse,
 					nom_coord_sp:nom_coord_sp
 				},
@@ -238,7 +238,7 @@ setTimeout(explode, 2000);*/
 					//$("#modal_body_inst").css("display","none");
 				}
 			});
-			
+
 	})
 
    //enregistrer sous division
@@ -247,12 +247,12 @@ setTimeout(explode, 2000);*/
 		var nom_paroisse = $("#nom_paroisse_sd").val();
 		var nom_sous_div = $("#nom_sous_div").val();
 		//console.log(nom_diocese)
-		
+
 			$.ajax({
 				url: 'sous_division.php',
 				type: 'POST',
-				data : { 
-					
+				data : {
+
 					nom_paroisse :nom_paroisse,
 					nom_sous_div:nom_sous_div
 				},
@@ -262,7 +262,7 @@ setTimeout(explode, 2000);*/
 					//$("#modal_body_inst").css("display","none");
 				}
 			});
-			
+
 	})
 
 //enregister ecole
@@ -306,36 +306,36 @@ setTimeout(explode, 2000);*/
 	     		//"Section "+section+ "</span><span id='options'> (option: "+option +")</span></li>";//(option: latin-philo)
 			//});
 
-     	
-     	// adress_exct arrete_agr 
 
-     	
+     	// adress_exct arrete_agr
+
+
 
 			$.ajax({
 				url: 'ecole.php',
 				type: 'POST',
-				data : { 
-					nom_ecole: nom_ecole, 
+				data : {
+					nom_ecole: nom_ecole,
 					matricule :matricule,
 					arrete_agr:arrete_agr,
 					adress_exct:adress_exct,
 					nivo_ecole: nivo_ecole,
 					c_banque:c_banque,
 					section_ecole2:section_ecole2,
-					nom_sous_div:nom_sous_div 
+					nom_sous_div:nom_sous_div
 				},
 				success : function(data)
 				{
-					
+
 
 					$(".essai").html(data);
 					//$("#config_ecole_div").css("display","none");
-					
+
 
 					/*if (nivo_ecole == "Maternelle") {
 						$("#passer_enr_mat").removeClass("hidden");
 						$("#passer_enr_mat").css("display","block");
-						
+
 					}
 					else if(nivo_ecole == "Primaire"){
 						$("#passer_enr_pri").removeClass("hidden");
@@ -343,10 +343,10 @@ setTimeout(explode, 2000);*/
 					}*/
 					//$("#modal_body_inst").css("display","none");
 					//$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
 			});
-		
+
      })
 //apercu2
 
@@ -368,8 +368,8 @@ setTimeout(explode, 2000);*/
 			var paroisse = tab_sous_div[2];
 			var sous_div = tab_sous_div[1];
 
-			
-		 	
+
+
 		 //}
 
      	$("#nom_ecole_conf").html(nom_ecole);//var nom_ecole_conf;
@@ -405,7 +405,7 @@ setTimeout(explode, 2000);*/
 
 $("#nivo_ecole_mod").change(function(){
         var choix = $("#nivo_ecole_mod").val();
-        console.log(choix) 
+        console.log(choix)
         if (choix=="Maternelle") {
         	$("#block_class_mat_mod").removeClass("hidden");
         	$("#block_class_pri_mod").addClass("hidden");
@@ -455,8 +455,8 @@ $("#nivo_ecole_mod").change(function(){
 			var paroisse = tab_sous_div[2];
 			var sous_div = tab_sous_div[1];
 
-			
-		 	
+
+
 		 //}
 
      	$("#nom_ecole_conf_mod").html(nom_ecole);//var nom_ecole_conf;
@@ -514,15 +514,15 @@ $("#nivo_ecole_mod").change(function(){
                         }
                     });
                 });
-				
+
 	$("#type").change(function(){
 		console.log($("#type").val())
 		//Analyste Conseiller d'enseignement
 		if($("#type").val() == "Conseiller d'enseignement"){
-			
+
 		}
 		else {
-			
+
 		}
 	});
 	//1*2**4JRS###
@@ -530,7 +530,7 @@ $("#nivo_ecole_mod").change(function(){
 	//enregistrer effectif
      $("#select_ecole_btn").click(function(){
      	var ecole_info = $("#select_ecole").val();
-     	
+
         console.log(ecole_info)
         var nom_ecole="";
         var nivo_ecole="";
@@ -576,10 +576,10 @@ $("#nivo_ecole_mod").change(function(){
      		$("#ecoleco_form").addClass("hidden");
      	}
      	else if(nivo_ecole == "Secondaire"){
-     		//aficher le tableau fois le no;nbre des 
+     		//aficher le tableau fois le no;nbre des
      		$("#ecoleco_form").css("display","block");
      		$("#ecoleco_form").removeClass("hidden");
-     		
+
      		$.ajax({
      			url :'Eleve_classe_section_option.php',
      			type:'post',
@@ -591,7 +591,7 @@ $("#nivo_ecole_mod").change(function(){
 
 					//$("#modal_body_inst").css("display","none");
 					//$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
      		});
      		$("#ecolepri_form").css("display","none");
@@ -600,7 +600,7 @@ $("#nivo_ecole_mod").change(function(){
      		$("#ecolemat_form").css("display","none");
      		$("#ecolemat_form").addClass("hidden");
 
-     		
+
      	}
      	else {
      		$("#ecolepri_form").css("display","none");
@@ -617,7 +617,7 @@ $("#nivo_ecole_mod").change(function(){
 	//redoublant choix ecole button
 	$("#select_ecole_btn_red").click(function(){
      	var ecole_info = $("#select_ecole").val();
-     	
+
         console.log(ecole_info)
         var nom_ecole="";
         var nivo_ecole="";
@@ -663,18 +663,18 @@ $("#nivo_ecole_mod").change(function(){
      		$("#ecoleco_form_red").addClass("hidden");
      	}
      	else if(nivo_ecole == "Secondaire"){
-     		//aficher le tableau fois le no;nbre des 
+     		//aficher le tableau fois le no;nbre des
      		$("#ecoleco_form_red").css("display","block");
      		$("#ecoleco_form_red").removeClass("hidden");
-     		
-     		
+
+
      		$("#ecolepri_form_red").css("display","none");
      		$("#ecolepri_form_red").addClass("hidden");
 
      		$("#ecolemat_form_red").css("display","none");
      		$("#ecolemat_form_red").addClass("hidden");
 
-     		
+
      	}
      	else {
      		$("#ecolepri_form_red").css("display","none");
@@ -691,7 +691,7 @@ $("#nivo_ecole_mod").change(function(){
 //redoublant choix ecole button
 	$("#select_ecole_btn_mouv").click(function(){
      	var ecole_info = $("#select_ecole").val();
-     	
+
         console.log(ecole_info)
         var nom_ecole="";
         var nivo_ecole="";
@@ -719,12 +719,12 @@ $("#nivo_ecole_mod").change(function(){
      		$("#ecolepri_form_mouv").css("display","block");
      		$("#ecolepri_form_mouv").removeClass("hidden");
      	}
-     	
+
      	else {
      		$("#ecolepri_form_mouv").css("display","none");
      		$("#ecolepri_form_mouv").addClass("hidden");
 
-     		
+
      	}
      });
 
@@ -733,7 +733,7 @@ $("#nivo_ecole_mod").change(function(){
 
 
 
-/*  
+/*
 
 	old #####################################################################################
 */
@@ -745,24 +745,24 @@ $("#nivo_ecole_mod").change(function(){
 		var nom_diocese = $("#nom_diocese").val();
 		var sous_div = $("#sous_div").val();
 		var territoire_imp = $("#territoire_imp").val();
-		
+
 
 		//var reg = /^[a-zA-Z/ 'éèàç-]{1,20}$/;
 		//if(reg.test(nom_inst) && reg.test(s_a_inst) && reg.test(details_inst) )
-		if($.trim(nom_paroisse).length > 0 && 
-			$.trim(bp_paroisse).length > 0 && 
-			$.trim(nom_diocese).length > 0 && 
-			$.trim(sous_div).length > 0 && 
+		if($.trim(nom_paroisse).length > 0 &&
+			$.trim(bp_paroisse).length > 0 &&
+			$.trim(nom_diocese).length > 0 &&
+			$.trim(sous_div).length > 0 &&
 			$.trim(territoire_imp).length > 0)
 		{
 			$.ajax({
 				url: 'paroisse.php',
 				type: 'POST',
-				data : { 
-					nom_paroisse: nom_paroisse, 
-					bp_paroisse :bp_paroisse, 
-					nom_diocese :nom_diocese, 
-					sous_div :sous_div, 
+				data : {
+					nom_paroisse: nom_paroisse,
+					bp_paroisse :bp_paroisse,
+					nom_diocese :nom_diocese,
+					sous_div :sous_div,
 					territoire_imp:territoire_imp
 				},
 				success : function(data)
@@ -770,20 +770,20 @@ $("#nivo_ecole_mod").change(function(){
 					$(".affreslt_inst").html(data);
 					$("#modal_body_inst").css("display","none");
 					$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
 			});
 		}
-		else 
+		else
 		{
 			$.ajax({
 				url: 'paroisse.php',
 				type: 'POST',
-				data : { 
-					nom_paroisse: nom_paroisse, 
-					bp_paroisse :bp_paroisse, 
-					nom_diocese :nom_diocese, 
-					sous_div :sous_div, 
+				data : {
+					nom_paroisse: nom_paroisse,
+					bp_paroisse :bp_paroisse,
+					nom_diocese :nom_diocese,
+					sous_div :sous_div,
 					territoire_imp:territoire_imp
 				},
 				success : function(data)
@@ -792,21 +792,21 @@ $("#nivo_ecole_mod").change(function(){
 					//$("#modal_body_inst").css("display","none");
 				}
 			});
-		}	
+		}
 	})
- 
+
 	//enregistrer option et section
 	$("#Enregistrer_sec_op").click(function(){
 		var nom_sec = $("#nom_sec").val();
 		var nom_op = $("#nom_op").val();
-		if($.trim(nom_sec).length > 0 && 
+		if($.trim(nom_sec).length > 0 &&
 			$.trim(nom_op).length > 0)
 		{
 			$.ajax({
 				url: 'section_option.php',
 				type: 'POST',
-				data : { 
-					nom_sec: nom_sec, 
+				data : {
+					nom_sec: nom_sec,
 					nom_op :nom_op
 				},
 				success : function(data)
@@ -814,17 +814,17 @@ $("#nivo_ecole_mod").change(function(){
 					$(".affreslt_inst").html(data);
 					//$("#modal_body_inst").css("display","none");
 					$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
 			});
 		}
-		else 
+		else
 		{
 			$.ajax({
 				url: 'section_option.php',
 				type: 'POST',
-				data : { 
-					nom_sec: nom_sec, 
+				data : {
+					nom_sec: nom_sec,
 					nom_op :nom_op
 				},
 				success : function(data)
@@ -835,10 +835,10 @@ $("#nivo_ecole_mod").change(function(){
 			});
 		}
 	})
-	
+
      $("#nivo_ecole").change(function(){
         var choix = $("#nivo_ecole").val();
-        console.log(choix) 
+        console.log(choix)
         if (choix=="Maternelle") {
         	$("#block_class_mat").removeClass("hidden");
         	$("#block_class_pri").addClass("hidden");
@@ -870,9 +870,9 @@ $("#nivo_ecole_mod").change(function(){
      })
      //$("#classe_ecole_ps").change(function(){
      	//var choix = $("#classe_ecole_ps").val();
-        //console.log(choix) 
+        //console.log(choix)
      //})
-     //Apercu 
+     //Apercu
       $("#apercu").click(function(){
      	var nom_ecole =  $("#nom_ecole").val();
      	var matricule  =  $("#matricule").val();
@@ -905,8 +905,8 @@ $("#nivo_ecole_mod").change(function(){
      	$("#territoire_conf").html(territoire_ecole);
 
      	$("#niveau").html(nivo_ecole);
-     	
-     	
+
+
      	if (classe_ecole_ps != null) {
      		$("#class_organisee").html("");
      		//var tab ="";
@@ -921,7 +921,7 @@ $("#nivo_ecole_mod").change(function(){
 	    }
 	    if (classe_ecole_m!= null) {
 	    	$("#class_organisee").html("");
-	    	
+
      		$.each(classe_ecole_m, function( i, l ){
 		  		class_org =class_org+"**"+l;
 			  	if (l == 1) {
@@ -950,8 +950,8 @@ $("#nivo_ecole_mod").change(function(){
 	     		//"Section"+sect+ "</span><span id='options'> (option: latin-philo)</span></li>");
 	     		$("#ul_section_option").html(sect);
 	    }
-	    
-	    
+
+
 
      })
 	//enreg
@@ -989,7 +989,7 @@ $("#nivo_ecole_mod").change(function(){
 
      	$("#niveau").html(nivo_ecole);
      	*/
-     	
+
      	if (classe_ecole_ps != null) {
      		//$("#class_organisee").html("");
      		//var tab ="";
@@ -1004,7 +1004,7 @@ $("#nivo_ecole_mod").change(function(){
 	    }
 	    if (classe_ecole_m!= null) {
 	    	$("#class_organisee").html("");
-	    	
+
      		$.each(classe_ecole_m, function( i, l ){
 		  		class_org =class_org+"**"+l;
 			  	if (l == 1) {
@@ -1033,17 +1033,17 @@ $("#nivo_ecole_mod").change(function(){
 	     		//"Section"+sect+ "</span><span id='options'> (option: latin-philo)</span></li>");
 	     		//$("#ul_section_option").html(sect);
 	    }
-	    if($.trim(nom_ecole).length > 0 && 
-	    $.trim(paroisse_et_info).length > 0 && 
-	    $.trim(nivo_ecole).length > 0 && 
-	    $.trim(class_org).length > 0 && 
+	    if($.trim(nom_ecole).length > 0 &&
+	    $.trim(paroisse_et_info).length > 0 &&
+	    $.trim(nivo_ecole).length > 0 &&
+	    $.trim(class_org).length > 0 &&
 			$.trim(matricule).length > 0)
 		{
 			$.ajax({
 				url: 'ecole.php',
 				type: 'POST',
-				data : { 
-					nom_ecole: nom_ecole, 
+				data : {
+					nom_ecole: nom_ecole,
 					matricule :matricule,
 					paroisse_et_info: paroisse_ecole,
 					nivo_ecole: nivo_ecole,
@@ -1053,11 +1053,11 @@ $("#nivo_ecole_mod").change(function(){
 				},
 				success : function(data)
 				{
-					
+
 
 					$(".essai").html(data);
 					$("#config_ecole_div").css("display","none");
-					
+
 
 					if (nivo_ecole == "Maternelle") {
 						$("#passer_enr_mat").removeClass("hidden");
@@ -1070,7 +1070,7 @@ $("#nivo_ecole_mod").change(function(){
 					}
 					//$("#modal_body_inst").css("display","none");
 					//$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
 			});
 		}
@@ -1079,8 +1079,8 @@ $("#nivo_ecole_mod").change(function(){
 			$.ajax({
 				url: 'ecole.php',
 				type: 'POST',
-				data : { 
-					nom_ecole: nom_ecole, 
+				data : {
+					nom_ecole: nom_ecole,
 					matricule :matricule,
 					paroisse_et_info: paroisse_ecole,
 					nivo_ecole: nivo_ecole,
@@ -1094,12 +1094,12 @@ $("#nivo_ecole_mod").change(function(){
 					//$("#config_ecole_div").css("display","none");
 					//$("#modal_body_inst").css("display","none");
 					//$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
 			});
 		}
-	    
-	    
+
+
 
      })
      //ecouteur du tableau maternelle
@@ -1122,7 +1122,7 @@ $("#nivo_ecole_mod").change(function(){
      	$("#"+id2+"9").html(c1+c3+c5);
      	$("#"+id2+"10").html(c2+c4+c6);
      	$("#"+id2+"11").html(c1+c2+c3+c4+c5+c6);
-     	
+
 
 
      })
@@ -1196,10 +1196,10 @@ $("#nivo_ecole_mod").change(function(){
      	var c2= parseInt($("#"+id2+"1").val());
      	var c3= parseInt($("#"+id2+"3").val());
      	var c4= parseInt($("#"+id2+"4").val());
-     	
+
      	$("#"+id2+"2").html(c1+c2);
      	$("#"+id2+"5").html(c3+c4);
-     	
+
 		//total
      	$("#"+id2+"6").html(c1+c3);
      	$("#"+id2+"7").html(c2+c4);
@@ -1221,12 +1221,12 @@ $("#nivo_ecole_mod").change(function(){
      	var c6= parseInt($("#"+id2+"7").val());
      	var c7= parseInt($("#"+id2+"9").val());
      	var c8= parseInt($("#"+id2+"10").val());
-     	
+
      	$("#"+id2+"2").html(c1+c2);
      	$("#"+id2+"5").html(c3+c4);
      	$("#"+id2+"8").html(c5+c6);
      	$("#"+id2+"11").html(c7+c8);
-     	
+
 		//total
      	$("#"+id2+"12").html(c1+c3+c5+c7);
      	$("#"+id2+"13").html(c2+c4+c6+c8);
@@ -1242,7 +1242,7 @@ $("#nivo_ecole_mod").change(function(){
      	var c1=parseInt($("#"+id2+"0").val());
      	var c2= parseInt($("#"+id2+"1").val());
      	var c3= parseInt($("#"+id2+"2").val());
-     
+
      	$("#"+id2+"3").html(c1+c2+c3);
      	console.log("okk221 "+idf+" ddd "+id2+"6")
      })
@@ -1258,7 +1258,7 @@ $("#nivo_ecole_mod").change(function(){
      	var c4= parseInt($("#"+id2+"3").val());
      	var c5= parseInt($("#"+id2+"4").val());
      	var c6= parseInt($("#"+id2+"5").val());
-     
+
      	$("#"+id2+"6").html(c1+c2+c3+c4+c5+c6);
      	console.log("okk221 "+idf+" ddd "+id2+"6")
      })
@@ -1272,7 +1272,7 @@ $("#nivo_ecole_mod").change(function(){
      	var c1=parseInt($("#"+id2+"0").val());
      	var c2= parseInt($("#"+id2+"1").val());
      	var c3= parseInt($("#"+id2+"2").val());
-     
+
      	$("#"+id2+"3").html(c1+c2+c3);
      	console.log("okk221 "+idf+" ddd "+id2+"6")
      })
@@ -1296,7 +1296,7 @@ $("#nivo_ecole_mod").change(function(){
      	var c12= parseInt($("#"+id2+"11").val());
      	var c13= parseInt($("#"+id2+"12").val());
      	var c14= parseInt($("#"+id2+"13").val());
-     
+
      	$("#"+id2+"14").html(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12+c13+c14);
      	console.log("okk221 "+idf+" ddd "+id2+"6")
      })
@@ -1321,7 +1321,7 @@ $("#nivo_ecole_mod").change(function(){
      	var c12= parseInt($("#"+id2+"11").val());
      	//var c13= parseInt($("#"+id2+"12").val());
      	//var c14= parseInt($("#"+id2+"13").val());
-     
+
      	$("#"+id2+"12").html(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12);
      	console.log("okk221 "+idf+" ddd "+id2+"6")
      })
@@ -1381,7 +1381,7 @@ $("#nivo_ecole_mod").change(function(){
                         	$("#ecolemat_form_table").addClass("hidden");
                         	$("#ecolemat_form_button").css("display","none");
                         	$("#ecolemat_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -1411,7 +1411,7 @@ $("#nivo_ecole_mod").change(function(){
                         	$("#ecolepri_form_table").addClass("hidden");
                         	$("#ecolepri_form_button").css("display","none");
                         	$("#ecolepri_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -1442,7 +1442,7 @@ $("#nivo_ecole_mod").change(function(){
                         	$("#ecolecl_form_table").addClass("hidden");
                         	$("#ecolecl_form_button").css("display","none");
                         	$("#ecolecl_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -1473,7 +1473,7 @@ $("#nivo_ecole_mod").change(function(){
                         	$("#ecoleco_form_table").addClass("hidden");
                         	$("#ecoleco_form_button").css("display","none");
                         	$("#ecoleco_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -1721,13 +1721,13 @@ $("#nivo_ecole_mod").change(function(){
      	var diocese_ecole =c[1];
      	var territoire_ecole =c[2];
      	//$("#affiche_resultat").html("okkkk");
-	    //condition d'enregistrement 
+	    //condition d'enregistrement
 	    console.log(nom_ecole)
 	    console.log(matricule)
 	    console.log(paroisse_et_info)
 	    console.log(nivo_ecole)
 	    console.log(section_ecole)
-	   /*if($.trim(nom_ecole).length > 0 && 
+	   /*if($.trim(nom_ecole).length > 0 &&
 			$.trim(matricule).length > 0 &&
 			$.trim(paroisse_et_info)> 0 &&
 			$.trim(nivo_ecole)> 0
@@ -1736,8 +1736,8 @@ $("#nivo_ecole_mod").change(function(){
 			$.ajax({
 				url: 'ecole.php',
 				type: 'POST',
-				data : { 
-					nom_ecole: nom_ecole, 
+				data : {
+					nom_ecole: nom_ecole,
 					matricule :matricule,
 					paroisse_et_info: paroisse_et_info,
 					nivo_ecole: nivo_ecole
@@ -1748,7 +1748,7 @@ $("#nivo_ecole_mod").change(function(){
 
 					//$("#modal_body_inst").css("display","none");
 					//$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
 			});
 		//}
@@ -1779,7 +1779,7 @@ $("#nivo_ecole_mod").change(function(){
                         	$("#ecolemat_form_table").addClass("hidden");
                         	$("#ecolemat_form_button").css("display","none");
                         	$("#ecolemat_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -1810,7 +1810,7 @@ $("#nivo_ecole_mod").change(function(){
                         	$("#ecolepri_form_table").addClass("hidden");
                         	$("#ecolepri_form_button").css("display","none");
                         	$("#ecolepri_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -1840,7 +1840,7 @@ $("#nivo_ecole_mod").change(function(){
                         	$("#ecolepri_form_table").addClass("hidden");
                         	$("#ecolepri_form_button").css("display","none");
                         	$("#ecolepri_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -1871,7 +1871,7 @@ $("#nivo_ecole_mod").change(function(){
                         	$("#ecolesec_form_table").addClass("hidden");
                         	$("#ecolesec_form_button").css("display","none");
                         	$("#ecolesec_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -1881,7 +1881,7 @@ $("#nivo_ecole_mod").change(function(){
      /*//enregistrer effectif
      $("#select_ecole_btn").click(function(){
      	var ecole_info = $("#select_ecole").val();
-     	
+
         console.log(ecole_info)
         var nom_ecole="";
         var nivo_ecole="";
@@ -1927,10 +1927,10 @@ $("#nivo_ecole_mod").change(function(){
      		$("#ecoleco_form").addClass("hidden");
      	}
      	else if(nivo_ecole == "Secondaire"){
-     		//aficher le tableau fois le no;nbre des 
+     		//aficher le tableau fois le no;nbre des
      		$("#ecoleco_form").css("display","block");
      		$("#ecoleco_form").removeClass("hidden");
-     		
+
      		$.ajax({
      			url :'Eleve_classe_section_option.php',
      			type:'post',
@@ -1942,7 +1942,7 @@ $("#nivo_ecole_mod").change(function(){
 
 					//$("#modal_body_inst").css("display","none");
 					//$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
      		});
      		$("#ecolepri_form").css("display","none");
@@ -1951,7 +1951,7 @@ $("#nivo_ecole_mod").change(function(){
      		$("#ecolemat_form").css("display","none");
      		$("#ecolemat_form").addClass("hidden");
 
-     		
+
      	}
      	else {
      		$("#ecolepri_form").css("display","none");
@@ -1967,7 +1967,7 @@ $("#nivo_ecole_mod").change(function(){
      //structture organisee select_structure_btn
      $("#select_structure_btn").click(function(){
      	var ecole_info = $("#select_ecole_stucture").val();
-     	
+
         console.log(ecole_info)
         var nom_ecole="";
         var nivo_ecole="";
@@ -2027,10 +2027,10 @@ $("#nivo_ecole_mod").change(function(){
      	}
      });
 
-	//STRUCTURE AUTORISEE 
+	//STRUCTURE AUTORISEE
 	$("#select_structure_aut_btn").click(function(){
      	var ecole_info = $("#select_ecole_stucture").val();
-     	
+
         console.log(ecole_info)
         var nom_ecole="";
         var nivo_ecole="";
@@ -2088,12 +2088,12 @@ $("#nivo_ecole_mod").change(function(){
      		$("#structure_aut_mat_form").css("display","none");
      		$("#structure_aut_mat_form").addClass("hidden");
      	}
-     }); 
+     });
 
 	//Age des eleves choix ecole
 	$("#select_age_ecole_btn").click(function(){
      	var ecole_info = $("#select_ecole_stucture").val();
-     	
+
         console.log(ecole_info)
         var nom_ecole="";
         var nivo_ecole="";
@@ -2180,11 +2180,11 @@ $("#nivo_ecole_mod").change(function(){
      			$("#resultat_tab").html(data);
      			$("#printBtn").removeClass("hidden");
      			$("#printBtn").css("display","block");
-     			
+
      		}
      	});
     	}
-    	
+
 
     })
     $("#select_paroisse_eff_btn").click(function() {
@@ -2199,11 +2199,11 @@ $("#nivo_ecole_mod").change(function(){
      			$("#resultat_eff_tab").html(data);
      			$("#printBtn").removeClass("hidden");
      			$("#printBtn").css("display","block");
-     			
+
      		}
      	});
     	}
-    	
+
 
     })
     //QGE REVOLU
@@ -2219,11 +2219,11 @@ $("#nivo_ecole_mod").change(function(){
      			$("#resultat_eff_tab").html(data);
      			$("#printBtn").removeClass("hidden");
      			$("#printBtn").css("display","block");
-     			
+
      		}
      	});
     	}
-    	
+
 
     })
 
@@ -2264,22 +2264,22 @@ my_form_add_personnel
         	date_nais_p = $('#date_nais_p').val();
 			date_eng_p = $('#date_eng_p').val();
 			date_dip = $('#date_dip').val();
-			
+
 
 			tab_date_nais_p = date_nais_p.split("/") ;
 			tab_date_eng_p = date_eng_p.split("/") ;
 			tab_date_dip = date_dip.split("/") ;
-			
 
-			date_nais_p = 	tab_date_nais_p[2]+"-"+tab_date_nais_p[1]+"-"+tab_date_nais_p[0];		
-			date_eng_p 	= 	tab_date_eng_p[2]+"-"+tab_date_eng_p[1]+"-"+tab_date_eng_p[0];		
-			date_dip 	= 	tab_date_dip[2]+"-"+tab_date_dip[1]+"-"+tab_date_dip[0];		
-			
+
+			date_nais_p = 	tab_date_nais_p[2]+"-"+tab_date_nais_p[1]+"-"+tab_date_nais_p[0];
+			date_eng_p 	= 	tab_date_eng_p[2]+"-"+tab_date_eng_p[1]+"-"+tab_date_eng_p[0];
+			date_dip 	= 	tab_date_dip[2]+"-"+tab_date_dip[1]+"-"+tab_date_dip[0];
+
 
 			var d = new Date();
 			var year = d.getFullYear();
-			
-			//var ap = 
+
+			//var ap =
 			//annee_pre_p = $('#annee_pre_p').val();
 			annee_pre_p_found = year - tab_date_eng_p[2];
 			annee_pre_p =annee_pre_p_found+"";
@@ -2291,7 +2291,7 @@ my_form_add_personnel
         	date_nais_p = "";
 			date_eng_p = "";
 			date_dip = "";
-			
+
         }
         if($.trim(date_pro_p).length > 0)
         {
@@ -2304,17 +2304,17 @@ my_form_add_personnel
         }
         var matricule_p = $('#matricule_p').val();
 		var nom_p = $('#nom_p').val();
-		
+
 		var sex_p = $('#sex_p').val();
-		
+
 		var nat_p = $('#nat_p').val();
 		var class_p = $('#class_p').val();
 		//class_p
 		var sifa_p = $('#sifa_p').val();
 		var conf_p = $('#conf_p').val();
-		
+
 		var qualdip_p = $('#qualdip_p').val();
-		
+
 		var grade_anc_p = "";
 		var grade_act_p = "";
 
@@ -2322,7 +2322,7 @@ my_form_add_personnel
 		var grade_anc_p1 = $('#select_grade_anc1').val();
 		var grade_act_p1 = $('#select_grade_act1').val();
 		var grade_act_p2 = $('#select_grade_act2').val();
-		
+
 		if (grade_act_p1 != "" && grade_act_p2 != "" && grade_anc_p1 != "" && grade_anc_p2 != "") {
 			grade_anc_p = grade_anc_p1+""+grade_anc_p2;
 			grade_act_p = grade_act_p1+""+grade_act_p2;
@@ -2356,9 +2356,9 @@ my_form_add_personnel
 		console.log(fonct_p)
 		console.log(select_ecole_affecter)*/
 		$.ajax({
-            
+
             url: 'gestion_personnel.php',
-			type: 'POST',        
+			type: 'POST',
             data: {
             	matricule_p:matricule_p,
 				nom_p:nom_p,
@@ -2396,8 +2396,8 @@ $("#button_mod").click(function(){
      	console.log("ok")
      	//var id2 = $(this).attr("id");current_ecole
 
-     	
-     	
+
+
      //})
 	var ecole = $("#select_ecole_mod").val();
 	console.log(ecole+" > bree")
@@ -2411,12 +2411,12 @@ $("#button_mod").click(function(){
 			success :function(data){
 				$(".result_mod").html(data);
 
-				
+
 		     	//ecouteur tableau maternelle modification effectif
 		     	for(var i=0;i<3;i++){
 		     	var id2 = $("#tabm6ans"+i).attr("id");
 		     	//console.log(id2)
-		     	
+
 		     	var c1= parseInt($("#"+id2+"0").val());
 		     	var c2= parseInt($("#"+id2+"1").val());
 		     	var c3= parseInt($("#"+id2+"3").val());
@@ -2481,10 +2481,10 @@ $("#button_mod").click(function(){
      	var c2= parseInt($("#"+id2+"1").val());
      	var c3= parseInt($("#"+id2+"3").val());
      	var c4= parseInt($("#"+id2+"4").val());
-     	
+
      	$("#"+id2+"2").html(c1+c2);
      	$("#"+id2+"5").html(c3+c4);
-     	
+
 		//total
      	$("#"+id2+"6").html(c1+c3);
      	$("#"+id2+"7").html(c2+c4);
@@ -2508,12 +2508,12 @@ $("#button_mod").click(function(){
      	var c6= parseInt($("#"+id2+"7").val());
      	var c7= parseInt($("#"+id2+"9").val());
      	var c8= parseInt($("#"+id2+"10").val());
-     	
+
      	$("#"+id2+"2").html(c1+c2);
      	$("#"+id2+"5").html(c3+c4);
      	$("#"+id2+"8").html(c5+c6);
      	$("#"+id2+"11").html(c7+c8);
-     	
+
 		//total
      	$("#"+id2+"12").html(c1+c3+c5+c7);
      	$("#"+id2+"13").html(c2+c4+c6+c8);
@@ -2522,7 +2522,7 @@ $("#button_mod").click(function(){
      //})
      };
      //})
-		     
+
 			}
 		});
 	};
@@ -2535,8 +2535,8 @@ $("#button_str_org_mod").click(function(){
      	var idf = this.id;
      	console.log(idf)
      	//var id2 = $(this).attr("id");
-     	
-     	
+
+
      //})
 	var ecole = $("#select_ecole_mod").val();
 	console.log(ecole)
@@ -2556,7 +2556,7 @@ $("#button_str_org_mod").click(function(){
 		     		var c1=parseInt($("#"+id2+"0").val());
 			     	var c2= parseInt($("#"+id2+"1").val());
 			     	var c3= parseInt($("#"+id2+"2").val());
-			     
+
 			     	$("#"+id2+"3").html(c1+c2+c3);
 		     	}
 		     	for(var i = 0;i<1;i++)
@@ -2573,7 +2573,7 @@ $("#button_str_org_mod").click(function(){
 			     	var c4= parseInt($("#"+id2+"3").val());
 			     	var c5= parseInt($("#"+id2+"4").val());
 			     	var c6= parseInt($("#"+id2+"5").val());
-			     
+
 			     	$("#"+id2+"6").html(c1+c2+c3+c4+c5+c6);
      	//console.log("okk221 "+idf+" ddd "+id2+"6")
      //})
@@ -2592,16 +2592,16 @@ $("#button_str_org_mod").click(function(){
 			     	var c4= parseInt($("#"+id2+"3").val());
 			     	var c5= parseInt($("#"+id2+"4").val());
 			     	var c6= parseInt($("#"+id2+"5").val());
-			     
+
 			     	$("#"+id2+"6").html(c1+c2+c3+c4+c5+c6);
 		     	}
 
-		     	
 
-		     
-     	
-     
-		     
+
+
+
+
+
 			}
 		});
 	};
@@ -2615,8 +2615,8 @@ $("#button_str_aut_mod").click(function(){
      	var idf = this.id;
      	console.log(idf)
      	//var id2 = $(this).attr("id");
-     	
-     	
+
+
      //})
 	var ecole = $("#select_ecole_mod").val();
 	console.log(ecole)
@@ -2636,7 +2636,7 @@ $("#button_str_aut_mod").click(function(){
 		     		var c1=parseInt($("#"+id2+"0").val());
 			     	var c2= parseInt($("#"+id2+"1").val());
 			     	var c3= parseInt($("#"+id2+"2").val());
-			     
+
 			     	$("#"+id2+"3").html(c1+c2+c3);
 		     	}
 		     	for(var i = 0;i<1;i++)
@@ -2653,7 +2653,7 @@ $("#button_str_aut_mod").click(function(){
 			     	var c4= parseInt($("#"+id2+"3").val());
 			     	var c5= parseInt($("#"+id2+"4").val());
 			     	var c6= parseInt($("#"+id2+"5").val());
-			     
+
 			     	$("#"+id2+"6").html(c1+c2+c3+c4+c5+c6);
      	//console.log("okk221 "+idf+" ddd "+id2+"6")
      //})
@@ -2672,16 +2672,16 @@ $("#button_str_aut_mod").click(function(){
 			     	var c4= parseInt($("#"+id2+"3").val());
 			     	var c5= parseInt($("#"+id2+"4").val());
 			     	var c6= parseInt($("#"+id2+"5").val());
-			     
+
 			     	$("#"+id2+"6").html(c1+c2+c3+c4+c5+c6);
 		     	}
 
-		     	
 
-		     
-     	
-     
-		     
+
+
+
+
+
 			}
 		});
 	};
@@ -2695,8 +2695,8 @@ $("#button_age_elev_mod").click(function(){
      	var idf = this.id;
      	console.log(idf)
      	//var id2 = $(this).attr("id");
-     	
-     	
+
+
      //})
 	var ecole = $("#select_ecole_mod").val();
 	console.log(ecole)
@@ -2721,7 +2721,7 @@ $("#button_age_elev_mod").click(function(){
 			     	var c1=parseInt($("#"+id2+"0").val());
 			     	var c2= parseInt($("#"+id2+"1").val());
 			     	var c3= parseInt($("#"+id2+"2").val());
-			     
+
 			     	$("#"+id2+"3").html(c1+c2+c3);
 			     	//console.log("okk221 "+idf+" ddd "+id2+"6")
 			     //})
@@ -2748,7 +2748,7 @@ $("#button_age_elev_mod").click(function(){
 			     	var c12= parseInt($("#"+id2+"11").val());
 			     	var c13= parseInt($("#"+id2+"12").val());
 			     	var c14= parseInt($("#"+id2+"13").val());
-			     
+
 			     	$("#"+id2+"14").html(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12+c13+c14);
      	//console.log("okk221 "+idf+" ddd "+id2+"6")
      //})
@@ -2775,16 +2775,16 @@ $("#button_age_elev_mod").click(function(){
 			     	var c12= parseInt($("#"+id2+"11").val());
 			     	//var c13= parseInt($("#"+id2+"12").val());
 			     	//var c14= parseInt($("#"+id2+"13").val());
-			     
+
 			     	$("#"+id2+"12").html(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12);
 		     	}
 
-		     	
 
-		     
-     	
-     
-		     
+
+
+
+
+
 			}
 		});
 	};
@@ -2807,7 +2807,7 @@ $("#modif_btn_redoublant").click(function(){
 				for(var i=0;i<1;i++){
 		     	var id2 = $("#tabm6ans"+i).attr("id");
 		     	console.log(id2)
-		     	
+
 		     	var c1= parseInt($("#"+id2+"0").val());
 		     	var c2= parseInt($("#"+id2+"1").val());
 		     	var c3= parseInt($("#"+id2+"3").val());
@@ -2826,7 +2826,7 @@ $("#modif_btn_redoublant").click(function(){
 		     }
 		     for (var i = 0; i < 1; i++) {
 		     	//$(".tabp6ans").keyup(function(){
-		     	
+
 		     	var id2 = $("#tabp6ans"+i).attr("id");
 		     	console.log(id2)
 		     	var c1= parseInt($("#"+id2+"0").val());
@@ -2853,7 +2853,7 @@ $("#modif_btn_redoublant").click(function(){
 		     	$("#"+id2+"19").html(c2+c4+c6+c8+c10+c12);
 		     	$("#"+id2+"20").html(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10+c11+c12);
      //})
-		     	
+
 		     }
 			}
 		});
@@ -2909,8 +2909,8 @@ $("#modif_btn_mouvement").click(function(){
 			     	$("#"+id2+"17").html(c1+c2+c3+c4+c5+c6+c7+c8+c9+c10);
 			     //})
 				}
-				
-		    
+
+
 			}
 		});
 	}
@@ -2937,7 +2937,7 @@ $('#my_form_inst_mod').on('submit', function (e) {
                         data: data,
                         success: function (response) {
                         	$(".affreslt_inst2").html(response);
-                        	
+
                             //$('#result > pre').html(response);
                             //$('#result > pre').html(JSON.stringify(response, undefined, 4));
                         }
@@ -2977,13 +2977,13 @@ $("#btn_select_coord_mod").click(function(){
 	var diocese=tab1[1];
 	var coordination_sp=tab1[2];
 	var id_dio = tab1[3];
-	
 
-	
+
+
 	$("#nom_coord_sp_mod").val(coordination_sp);
 	$("#id_diocese").val(id_dio);
 	$("#select_dio_mod").val(id_dio).change();
-	
+
 	$("#id_ecole").val(id);
 
 })
@@ -2999,7 +2999,7 @@ $("#mod_coord_sp").click(function(){
 	console.log(select_dio_mod)
 	//console.log(id_diocese)
 
-	
+
 	$.ajax({
 		url:'modification_coord_sp.php',
 		type:'post',
@@ -3022,7 +3022,7 @@ $("#btn_select_paroisse").click(function(){
 	var nom_coord_sp =tab1[1];
 	var nom_paroisse=tab1[2];
 	var id_coord_sp = tab1[3];
-	
+
 	$("#select_coord_sp_mod").val(id_coord_sp).change();
 	$("#nom_paroisse_mod").val(nom_paroisse);
 	$("#id_paroisse").val(id);
@@ -3040,7 +3040,7 @@ $("#mod_paroisse").click(function(){
 	console.log(nom_paroisse_mod)
 	console.log(id_paroisse)
 	console.log(id_coord_sp)
-	
+
 	$.ajax({
 		url:'modification_paroisse.php',
 		type:'post',
@@ -3062,7 +3062,7 @@ $("#btn_select_sous_div").click(function(){
 	var nom_coord_sp =tab1[1];
 	var nom_paroisse=tab1[2];
 	var id_coord_sp = tab1[3];
-	
+
 	$("#nom_paroisse_sd_mod").val(id_coord_sp).change();
 	$("#nom_sous_div_mod").val(nom_paroisse);
 	$("#id_sous_div").val(id);
@@ -3080,7 +3080,7 @@ $("#mod_sous_div").click(function(){
 	console.log(nom_sous_div_mod)
 	console.log(id_sous_div)
 	console.log(id_paroisse)
-	
+
 	$.ajax({
 		url:'modification_sous_div.php',
 		type:'post',
@@ -3119,7 +3119,7 @@ $("#btn_select_ecole").click(function(){
 	var sec = liste_option.split("**");
 	console.log(sec)
 
-	
+
 	//this.date(this.getMoment()
 /*Date i = getDate();
 console.log(i.getDate())*/
@@ -3134,7 +3134,7 @@ console.log(i.getDate())*/
 	$("#nivo_ecole_mod").val(id_niveau).change();
 
 	$("#section_ecole_mod").val(sec).change();
-	
+
 	console.log(par)
 
 	/*nom_ecole_mod
@@ -3222,7 +3222,7 @@ $('#ecolemat_form_mod').on('submit', function (e) {
                         	$("#ecolemat_form_table").addClass("hidden");
                         	$("#ecolemat_form_button").css("display","none");
                         	$("#ecolemat_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -3252,12 +3252,12 @@ $('#ecolepri_form_mod').on('submit', function (e) {
                         	$("#ecolepri_form_table").addClass("hidden");
                         	$("#ecolepri_form_button").css("display","none");
                         	$("#ecolepri_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
                 });
-//modificatin age sex ecole co 
+//modificatin age sex ecole co
 $('#ecoleco_form_mod').on('submit', function (e) {
 		//$("#Enregistrer_inst").click(function(){
                     // On empêche le navigateur de soumettre le formulaire
@@ -3283,7 +3283,7 @@ $('#ecoleco_form_mod').on('submit', function (e) {
                         	$("#ecoleco_form_table").addClass("hidden");
                         	$("#ecoleco_form_button").css("display","none");
                         	$("#ecoleco_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -3314,7 +3314,7 @@ $('#ecoleco_form_mod').on('submit', function (e) {
                         	$("#ecolecl_form_table").addClass("hidden");
                         	$("#ecolecl_form_button").css("display","none");
                         	$("#ecolecl_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -3573,7 +3573,7 @@ $('#structuremat_form_mod').on('submit', function (e) {
                         	$("#ecolemat_form_table").addClass("hidden");
                         	$("#ecolemat_form_button").css("display","none");
                         	$("#ecolemat_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -3604,7 +3604,7 @@ $('#structuremat_form_mod').on('submit', function (e) {
                         	$("#ecolepri_form_table").addClass("hidden");
                         	$("#ecolepri_form_button").css("display","none");
                         	$("#ecolepri_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -3636,7 +3636,7 @@ $('#structuremat_form_mod').on('submit', function (e) {
                         	$("#ecolepri_form_table").addClass("hidden");
                         	$("#ecolepri_form_button").css("display","none");
                         	$("#ecolepri_form_button").addClass("hidden");
-                        	
+
 
                         }
                     });
@@ -3660,7 +3660,7 @@ $("#tri_sd").click(function(){
 
 
 
-	
+
 });
 $("#tri_p").click(function(){
 	console.log("tri_p")
@@ -3673,15 +3673,15 @@ $("#tri_p").click(function(){
 	$(".tableau_tri_sous_div").css("display","none");
 	$(".tableau_tri_diocese").css("display","none");
 
-	
+
 	$(".tableau_tri_coord_sp").css("display","none");
-	
+
 	$(".tableau_tri_paroisse").css("display","block");
 	//$(".tableau_tri_paroisse").addClass("zoomOut");
 
 	/*$(".msgApology").addClass("fadeOutUpBig");
 		$(".msgApology").removeClass("bounceIn");*/
-	
+
 });
 $("#tri_csp").click(function(){
 	console.log("tri_csp")
@@ -3695,10 +3695,10 @@ $("#tri_csp").click(function(){
 	$(".tableau_tri_sous_div").css("display","none");
 	$(".tableau_tri_diocese").css("display","none");
 	$(".tableau_tri_paroisse").css("display","none");
-	
+
 	//$(".tableau_tri_coord_sp").css("display","block");
 	//tableau_tri_coord_sp
-	
+
 });
 $("#tri_d").click(function(){
 	console.log("tri_d")
@@ -3714,7 +3714,7 @@ $("#tri_d").click(function(){
 	$(".tableau_tri_paroisse").css("display","none");
 	$(".tableau_tri_coord_sp").css("display","none");
 
-	
+
 });
 $("#tri_paroisse").click(function(){
 	$(".synthese_par_diocese").css("display","none");
@@ -3723,7 +3723,7 @@ $("#tri_paroisse").click(function(){
 	$("#tri_paroisse_gly").addClass("glyphicon-ok");
 	$("#tri_diocese_gly").removeClass("glyphicon-ok");
 	//console.log("paroisse")
-}) 
+})
 $("#tri_diocese").click(function(){
 	$(".synthese_par_diocese").css("display","block");
 	$(".synthese_par_paroisse").css("display","none");
@@ -3732,13 +3732,13 @@ $("#tri_diocese").click(function(){
 	$("#tri_diocese_gly").addClass("glyphicon-ok");
 	//console.log("diocese")
 
-})  
+})
 
 //MISE EN PLACE DU PROSNNEL
 	//enregistrer effectif
      $("#select_ecole_btn_mise_en_place").click(function(){
      	var ecole_info = $("#select_ecole").val();
-     	
+
         console.log(ecole_info)
         var nom_ecole="";
         var nivo_ecole="";
@@ -3773,7 +3773,7 @@ $("#tri_diocese").click(function(){
 
 					//$("#modal_body_inst").css("display","none");
 					//$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
      		});
      });
@@ -3781,9 +3781,9 @@ $("#tri_diocese").click(function(){
 //select_ecole_btn_personnel_p_sex
  $("#select_ecole_btn_personnel_p_sex").click(function(){
      	var ecole_info = $("#select_ecole").val();
-     	
+
         console.log(ecole_info)
-        
+
      	//console.log(ecole)
      	$.ajax({
      			url :'personnel_par_sex.php',
@@ -3796,7 +3796,7 @@ $("#tri_diocese").click(function(){
 
 					//$("#modal_body_inst").css("display","none");
 					//$("#Enregistrer_inst").css("opacity",0);
-					
+
 				}
      		});
      });
@@ -3826,7 +3826,7 @@ $(".btn-initializer").click(function(){
 
 					//$("#modal_body_inst").css("display","none");
 					//$("#Enregistrer_inst").css("opacity",0);
-					
+
 		}
 	});
 })
@@ -3847,22 +3847,22 @@ $(".btn-initializer").click(function(){
         	date_nais_p = $('#date_nais_p').val();
 			date_eng_p = $('#date_eng_p').val();
 			date_dip = $('#date_dip').val();
-			
+
 
 			tab_date_nais_p = date_nais_p.split("/") ;
 			tab_date_eng_p = date_eng_p.split("/") ;
 			tab_date_dip = date_dip.split("/") ;
-			
 
-			date_nais_p = 	tab_date_nais_p[2]+"-"+tab_date_nais_p[1]+"-"+tab_date_nais_p[0];		
-			date_eng_p 	= 	tab_date_eng_p[2]+"-"+tab_date_eng_p[1]+"-"+tab_date_eng_p[0];		
-			date_dip 	= 	tab_date_dip[2]+"-"+tab_date_dip[1]+"-"+tab_date_dip[0];		
-			
+
+			date_nais_p = 	tab_date_nais_p[2]+"-"+tab_date_nais_p[1]+"-"+tab_date_nais_p[0];
+			date_eng_p 	= 	tab_date_eng_p[2]+"-"+tab_date_eng_p[1]+"-"+tab_date_eng_p[0];
+			date_dip 	= 	tab_date_dip[2]+"-"+tab_date_dip[1]+"-"+tab_date_dip[0];
+
 
 			var d = new Date();
 			var year = d.getFullYear();
-			
-			//var ap = 
+
+			//var ap =
 			//annee_pre_p = $('#annee_pre_p').val();
 			annee_pre_p_found = year - tab_date_eng_p[2];
 			annee_pre_p =annee_pre_p_found+"";
@@ -3874,7 +3874,7 @@ $(".btn-initializer").click(function(){
         	date_nais_p = "";
 			date_eng_p = "";
 			date_dip = "";
-			
+
         }
         if($.trim(date_pro_p).length > 0)
         {
@@ -3887,17 +3887,17 @@ $(".btn-initializer").click(function(){
         }
         var matricule_p = $('#matricule_p').val();
 		var nom_p = $('#nom_p').val();
-		
+
 		var sex_p = $('#sex_p').val();
-		
+
 		var nat_p = $('#nat_p').val();
 		var class_p = $('#class_p').val();
 		//class_p
 		var sifa_p = $('#sifa_p').val();
 		var conf_p = $('#conf_p').val();
-		
+
 		var qualdip_p = $('#qualdip_p').val();
-		
+
 		var grade_anc_p = "";
 		var grade_act_p = "";
 
@@ -3905,7 +3905,7 @@ $(".btn-initializer").click(function(){
 		var grade_anc_p1 = $('#select_grade_anc1').val();
 		var grade_act_p1 = $('#select_grade_act1').val();
 		var grade_act_p2 = $('#select_grade_act2').val();
-		
+
 		if (grade_act_p1 != "" && grade_act_p2 != "" && grade_anc_p1 != "" && grade_anc_p2 != "") {
 			grade_anc_p = grade_anc_p1+""+grade_anc_p2;
 			grade_act_p = grade_act_p1+""+grade_act_p2;
@@ -3939,9 +3939,9 @@ $(".btn-initializer").click(function(){
 		console.log(fonct_p)
 		console.log(select_ecole_affecter)
 		$.ajax({
-            
+
             url: 'gestion_personnel.php',
-			type: 'POST',        
+			type: 'POST',
             data: {
             	matricule_p:matricule_p,
 				nom_p:nom_p,
@@ -3964,17 +3964,17 @@ $(".btn-initializer").click(function(){
             },
             success: function (data) {
                  //affreslt_inst
-     			$(".affreslt_inst").html(data);
+     					$(".affreslt_inst").html(data);
 
             }
         });
 
     });
 
-//fin 
+//fin
 })
-         
-	
+
+
 /*
 
 var obj = {
@@ -3997,11 +3997,3 @@ Iterates over the properties in an object, accessing both the current item and i
 $.each({ name: "John", lang: "JS" }, function( k, v ) {
   alert( "Key: " + k + ", Value: " + v );
 });*/
-       
-
-
-
-        
-       
-
-        
